@@ -6,7 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "backend:dev": "next dev -p 3001",
+    "db:up": "docker compose -p restful up -d",
+    "db:down": "docker compose -p restful down --remove-orphans",
+    "db:migrate": "npx prisma migrate dev",
+    "db:generate": "npx prisma generate",
+    "db:studio": "npx prisma studio",
+    "db:seed": "tsx prisma/seed.ts",
+    "db:backup": "docker exec restful-db-1 pg_dumpall -U postgres -c > db/dbbackup-$(date +\"%Y_%m_%d\").sql",
+    "db:import": "docker cp db/dbbackup-2023_08_22.sql restful-db-1:tmp/dbbackup-2023_08_22.sql; docker exec restful-db-1 psql -U postgres -f tmp/dbbackup-2023_08_22.sql postgres"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
@@ -47,6 +56,17 @@
     "typescript": "5.1.6",
     "viem": "^1.19.1",
     "wagmi": "^1.4.6",
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "@lens-protocol/client": "2.0.0-alpha.21",
+    "@prisma/client": "5.1.1",
+    "@upstash/qstash": "^2.2.0",
+    "bufferutil": "^4.0.8",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "encoding": "^0.1.13",
+    "prisma": "^5.1.1",
+    "tsx": "^3.12.7"
   }
 }

@@ -1,0 +1,122 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "challengeAddress",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "creator",
+                "type": "address"
+            }
+        ],
+        "name": "NewChallengeContract",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "challengeContracts",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_owner",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_wagerAmount",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address[]",
+                "name": "_participants",
+                "type": "address[]"
+            },
+            {
+                "internalType": "string[]",
+                "name": "_participantsLensIds",
+                "type": "string[]"
+            },
+            {
+                "internalType": "address[]",
+                "name": "_judges",
+                "type": "address[]"
+            },
+            {
+                "internalType": "string[]",
+                "name": "_judgesLensIds",
+                "type": "string[]"
+            },
+            {
+                "internalType": "string",
+                "name": "_activity",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_completionTimeUnit",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_activityPerTimeUnit",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_duration",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "_tokenAddress",
+                "type": "address"
+            }
+        ],
+        "name": "createChallengeContract",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getChallengeContractCount",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]
