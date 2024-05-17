@@ -22,14 +22,14 @@ export default function RootLayout({ children }) {
             <link rel="icon" href="/images/icons/iconmain-512x512.png" />
             <meta name="theme-color" content="#000000" />
             <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-            <meta name="description" content="Get fit, get aped, get paid." />
+            <meta name="description" content="Get fit, get muscles, get paid." />
             <title>CrossChainFitness</title>
             {/* <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap" rel="stylesheet"></link> */}
             <body>
                 <Web3ModalProvider>
                     <LensProvider>
                         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-                            {/* <Nav /> */}
+                            <Nav />
                             {children}
                         </ThemeProvider>
                     </LensProvider>
