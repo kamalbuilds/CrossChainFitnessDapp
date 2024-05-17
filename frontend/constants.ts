@@ -1,0 +1,5 @@
+export const FACTORY_CONTRACT_ADDRESS ="";
+
+export const USDCCOIN_CONTRACT_ADDRESS ="";
+
+export const CHALLENGE_CONTRACT_ADDRESS ="";
